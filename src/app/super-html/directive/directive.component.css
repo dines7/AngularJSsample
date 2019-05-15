@@ -1,0 +1,33 @@
+table{
+    border: 2px;
+    border-color: red;
+    border-style: solid;
+}
+th{
+    border: 1px;
+    border-color: red;
+    border-style: solid;
+}
+td{
+    border: 1px;
+    border-color: red;
+    border-style: solid;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background:red;
+}
+.yesbox{
+    
+    width: 100px;
+    height: 100px;
+    background:burlywood
+}
+.nobox{
+    
+    width: 100px;
+    height: 100px;
+    background:brown
+}

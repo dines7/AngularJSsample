@@ -1,0 +1,79 @@
+Friends:{{ friends }}
+<ul>
+  <li *ngFor ="let f of friends; let counter=index">
+    {{ f }}. counter number {{ counter }}</li>
+</ul>
+
+{{ displaytext() }}
+
+<hr>
+<div>
+
+Demo of *ngfor directicve with json array:
+<table class="table">
+<thead>
+  <tr>
+    <th>S.no</th>
+    <th>City</th>
+    <th>STD</th>
+  </tr>
+</thead>
+<tbody>
+<tr *ngFor="let l of location">
+  <td>{{ l.id }}</td>
+  <td>{{ l.name }}</td>
+  <td>{{ l.city }}</td>
+</tr>
+</tbody>
+</table>
+
+<table class="table2">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>Username</th>
+        <th>Zipcode</th>
+        <th>lat</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let u of user">
+      <td>{{ u.id }}</td>
+      <td>{{ u.username }}</td>
+      <td>{{ u.address.zipcode }}</td>
+      <td>{{ u.address.geo.lat }}</td>
+    </tr>
+    </tbody>
+    </table>
+</div>
+<hr>
+<div>
+  Demo of *ngif directive:
+  <button (click)="togglecheck()"> togglecheck </button>
+  <div class="box" *ngIf ="check"></div>
+</div>
+
+<div>
+    Demo of *ngif directive:
+    <button (click)="toggleElsecheck()"> togglecheck </button>
+    <div class="yesbox" *ngIf ="checkelse; else elsetemplate"> Ia am here</div>
+    <button>T</button>
+  </div>
+  <ng-template  #elsetemplate>
+    <div class="nobox">
+      hip hi
+    </div>
+  </ng-template>
+
+<hr>
+<div>
+    Demo of *ngSwitchCase directive:
+    <div [ngSwitch] ="city">
+      <span *ngSwitchCase="'044'">Chennai</span>
+      <span *ngSwitchCase="'022'">Mumbai</span>
+      <span *ngSwitchCase="'033'">Kolkata</span>
+      <span *ngSwitchCase="'080'">Bengaluru</span>
+      <span *ngSwitchDefault>NA</span>
+    </div>
+</div>
+<hr>
