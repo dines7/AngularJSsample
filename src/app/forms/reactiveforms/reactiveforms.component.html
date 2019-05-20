@@ -1,0 +1,24 @@
+<div>
+  Reactive forms:
+  <br>
+  <div>
+    <form [formGroup]='myForm' (ngSubmit)="sumbitForm(myForm)">
+      <label>Name: </label>
+     
+      <input type='text' formControlName="fn">
+      <br>
+      <br>
+      <label>Score: </label>      
+      <input type="number" formControlName="score">
+      <br>
+      <br>
+      <select formControlName="hobby">
+        <option value="hacking">Hacking</option>        
+        <option value="driving">Driving</option>
+        <option value="camping">Camping</option>        
+      </select>
+      <br>
+      <button type='submit' >Submit</button>
+    </form>
+  </div>
+</div>

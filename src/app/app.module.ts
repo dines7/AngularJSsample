@@ -1,6 +1,11 @@
+;
+import { AnimationComponent } from './animations/animation/animation.component'
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Component } from '@angular/core';
 import {RouterModule} from '@angular/router'
+import {FormsModule} from  '@angular/forms'
+import { ReactiveFormsModule} from '@angular/forms'
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +23,8 @@ import { ThumbnailComponent } from './assignment/allcomponents/thumbnail/thumbna
 import { DirectiveComponent } from './super-html/directive/directive.component';
 import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
 import { ErrorpageComponent } from './Notfound/errorpage/errorpage.component';
+import { ReactiveformsComponent } from './forms/reactiveforms/reactiveforms.component';
+
 
 @NgModule({
   declarations: [
@@ -35,11 +42,16 @@ import { ErrorpageComponent } from './Notfound/errorpage/errorpage.component';
     ThumbnailComponent,
     DirectiveComponent,
     PipeDemoComponent,
-    ErrorpageComponent
+    ErrorpageComponent,
+    ReactiveformsComponent,
+    AnimationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot([
       {
         path:'',
@@ -79,6 +91,14 @@ import { ErrorpageComponent } from './Notfound/errorpage/errorpage.component';
       {
         path:'pipe',
         component:PipeDemoComponent
+      },
+      {
+        path:'forms',
+        component:ReactiveformsComponent
+      },
+      {     
+        path:'animate',
+        component:AnimationComponent
       },
       {
         path:'**',
