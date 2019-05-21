@@ -1,7 +1,5 @@
 import { Component, OnInit, TRANSLATIONS_FORMAT } from '@angular/core';
 import { trigger, state, style, transition, animate} from '@angular/animations'
-import { transformAll } from '@angular/compiler/src/render3/r3_ast';
-import { Transform } from 'stream';
 
 @Component({
   selector: 'app-animation',

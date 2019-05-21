@@ -6,6 +6,7 @@ import {RouterModule} from '@angular/router'
 import {FormsModule} from  '@angular/forms'
 import { ReactiveFormsModule} from '@angular/forms'
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,6 +25,7 @@ import { DirectiveComponent } from './super-html/directive/directive.component';
 import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
 import { ErrorpageComponent } from './Notfound/errorpage/errorpage.component';
 import { ReactiveformsComponent } from './forms/reactiveforms/reactiveforms.component';
+import { RemoteComponent } from './restapi/remote/remote.component';
 
 
 @NgModule({
@@ -44,7 +46,8 @@ import { ReactiveformsComponent } from './forms/reactiveforms/reactiveforms.comp
     PipeDemoComponent,
     ErrorpageComponent,
     ReactiveformsComponent,
-    AnimationComponent
+    AnimationComponent,
+    RemoteComponent
   ],
   imports: [
     BrowserModule,
@@ -52,6 +55,7 @@ import { ReactiveformsComponent } from './forms/reactiveforms/reactiveforms.comp
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     RouterModule.forRoot([
       {
         path:'',
@@ -99,6 +103,10 @@ import { ReactiveformsComponent } from './forms/reactiveforms/reactiveforms.comp
       {     
         path:'animate',
         component:AnimationComponent
+      },
+      {     
+        path:'remote',
+        component:RemoteComponent
       },
       {
         path:'**',
