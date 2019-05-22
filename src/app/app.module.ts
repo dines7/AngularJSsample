@@ -26,6 +26,7 @@ import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
 import { ErrorpageComponent } from './Notfound/errorpage/errorpage.component';
 import { ReactiveformsComponent } from './forms/reactiveforms/reactiveforms.component';
 import { RemoteComponent } from './restapi/remote/remote.component';
+import { EmployeedetailsComponent } from './employeedetails/employeedetails.component';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { RemoteComponent } from './restapi/remote/remote.component';
     ErrorpageComponent,
     ReactiveformsComponent,
     AnimationComponent,
-    RemoteComponent
+    RemoteComponent,
+    EmployeedetailsComponent
   ],
   imports: [
     BrowserModule,
